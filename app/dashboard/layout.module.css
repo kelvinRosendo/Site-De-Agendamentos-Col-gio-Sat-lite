@@ -1,0 +1,73 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+}
+
+.logout {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+}
+
+.logout img {
+    height: 65px;
+    border-radius: 100%;
+}
+
+.logout button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.logout button:hover {
+    background-position: 100% 0;
+}

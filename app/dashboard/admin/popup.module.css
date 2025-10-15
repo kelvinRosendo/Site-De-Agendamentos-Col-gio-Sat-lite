@@ -1,0 +1,255 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.525);
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.message {
+    background: var(--background-main);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 101;
+    color: var(--foreground-main);
+    max-width: 80%;
+}
+
+.message h3 {
+    text-align: center;
+}
+
+.button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.button:hover {
+    background-position: 100% 0;
+}
+
+.checkbox input {
+    width: 0;
+}
+
+.checkbox {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 5px 5px;
+    color: var(--foreground-header);
+    border-radius: 10px;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    cursor: pointer;
+    margin: 0 7.5px;
+}
+
+.checkbox:not(:has(input:disabled)):hover {
+    background-position: 100% 0;
+}
+
+.checkbox span {
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-color: var(--foreground-header);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.checkbox:has(input:disabled) {
+    opacity: 50%;
+    text-decoration: line-through;
+}
+
+.checkbox:has(input:checked) {
+    background-position: 100% 0;
+    color: var(--foreground-header);
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.checkbox:has(input:checked) span {
+    border: 2px solid var(--foreground-header);
+    border-top: 0;
+    border-left: 0;
+    padding: 6px 3px;
+    border-radius: 3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 6px;
+}
+
+.schedules {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.header {
+    background-color: var(--accent-yellow);
+}
+
+.header td {
+    padding: 10px;
+}
+
+.schedules tr:nth-child(odd):not(:first-child) {
+    background-color: var(--background-footer);
+}
+
+.schedule td {
+    padding: 10px;
+}
+
+.delete {
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, rgba(100, 20, 20, 1)), to(rgba(100, 20, 20, 1)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, rgba(100, 20, 20, 1) 50%, rgba(100, 20, 20, 1));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, rgba(100, 20, 20, 1) 50%, rgba(100, 20, 20, 1));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+}
+
+.buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    color: var(--foreground-header);
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0.9rem;
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    transition: background-position .3s ease-in-out;
+    cursor: text;
+    padding-left: 4px;
+}
+
+.input:hover {
+    background-position: 100% 0;
+}
+
+.label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.chromeList {
+    list-style: none;
+    columns: 4;
+}
+
+.chrome {
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    color: var(--foreground-header);
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    transition: background-position .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.chrome:hover {
+    background-position: 100% 0;
+}
+
+.chrome, .chrome * {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 647px) {
+    .chromeList {
+        columns: 3;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .chromeList {
+        columns: 2;
+    }
+}

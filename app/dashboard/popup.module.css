@@ -1,0 +1,75 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.525);
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.message {
+    background: var(--background-main);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 101;
+    color: var(--foreground-main);
+    max-width: 30%;
+}
+
+.button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.button:hover {
+    background-position: 100% 0;
+}

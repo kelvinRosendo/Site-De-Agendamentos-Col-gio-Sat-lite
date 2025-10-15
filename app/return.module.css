@@ -1,0 +1,29 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.button:hover {
+    background-position: 100% 0;
+}

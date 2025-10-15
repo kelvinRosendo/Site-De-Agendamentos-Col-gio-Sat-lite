@@ -1,0 +1,240 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+.aside {
+    box-shadow: rgba(255, 255, 255, 0.226) 0px 1px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--background-header);
+    -ms-flex-preferred-size: 15%;
+    flex-basis: 15%;
+}
+
+.title {
+    color: var(--foreground-header);
+    border-bottom: solid 2px var(--foreground-header);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.chartContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--foreground-header);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pieChart {
+    background-image: conic-gradient(var(--background-footer) 0, var(--background-footer) var(--max), var(--accent-yellow) 0, var(--accent-yellow) var(--value));
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+.innerChart {
+    background: var(--background-header);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main {
+    box-shadow: rgba(255, 255, 255, 0.226) 0px 1px 10px;
+    background-color: var(--background-header);
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.article {
+    overflow: visible;
+}
+
+.header {
+    background: var(--accent-yellow);
+    padding: 10px;
+    color: var(--foreground-header);
+}
+
+.header.late {
+    background: var(--accent-red);
+}
+
+.body {
+    padding: 10px;
+    background: var(--background-footer);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.chrome {
+    padding: 5px 10px;
+    background: var(--background-header);
+    color: var(--foreground-header);
+    border-radius: 5px;
+    text-wrap: nowrap;
+    word-wrap: nowrap;
+    font-size: 1.4rem;
+    height: 2.4rem;
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.article .header {
+    z-index: 3;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.schedules {
+    height: 100%;
+}
+
+.schedules>.body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 91%;
+    position: relative;
+}
+
+.schedulesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.chromesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.schedulesContainer {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 40px 10px;
+    height: 100%;
+    width: 100%;
+    right: 0;
+}
+
+.chromesContainer {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.schedule {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.body .body {
+    background: var(--background-header);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.body .body .chrome {
+    background: var(--background-footer);
+    color: var(--foreground-footer);
+    -webkit-animation: none;
+    animation: none;
+    position: static;
+    text-align: center;
+    width: 145px;
+    margin: auto;
+}

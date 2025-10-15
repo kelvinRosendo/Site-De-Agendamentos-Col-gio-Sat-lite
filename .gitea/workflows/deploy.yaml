@@ -1,0 +1,54 @@
+name: Deploy NextJS App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: web-project-amd64
+
+    steps:
+      - name: Clone Repository (com token)
+        run: |
+          git clone https://admin:${{ secrets.TOKEN }}@colegiosatelite.zapto.org:3001/admin/agendamentos.git .
+          git checkout main
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Instalar dependências
+        shell: powershell
+        run: pnpm install
+
+      - name: Build Next.js
+        shell: powershell
+        run: pnpm run build
+
+      - name: Criar diretório no servidor
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "mkdir -p /home/deploy/agendamentos"
+        shell: bash
+
+      - name: Copiar Arquivos para VPS
+        run: |
+          scp -r ./.next ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/deploy/agendamentos
+          scp -r ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/deploy/agendamentos
+          scp ./package.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/deploy/agendamentos
+          scp ./package-lock.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/deploy/agendamentos
+          scp ./next.config.ts ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/deploy/agendamentos
+        shell: bash
+
+      - name: Instalar dependências no VPS
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home/deploy/agendamentos ; npm install"
+
+      - name: Reiniciar serviço
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo systemctl restart agendamentos.service"
+        shell: bash

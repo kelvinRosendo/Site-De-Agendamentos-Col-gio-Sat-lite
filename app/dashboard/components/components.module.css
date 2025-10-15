@@ -1,0 +1,268 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.weekdays {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.checkboxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    row-gap: 12.5px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.checkboxes label input {
+    width: 0;
+}
+
+.checkboxes label {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 5px 5px;
+    color: var(--foreground-header);
+    border-radius: 10px;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    cursor: pointer;
+    width: 110px;
+    height: 29px;
+    text-wrap: nowrap;
+}
+
+.checkboxes label:not(:has(input:disabled)):hover {
+    background-position: 100% 0;
+}
+
+.checkboxes label span {
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-color: var(--foreground-header);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.checkboxes label:has(input:disabled) {
+    opacity: 50%;
+    text-decoration: line-through;
+}
+
+.checkboxes label:has(input:checked) {
+    background-position: 100% 0;
+    color: var(--foreground-header);
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.checkboxes label:has(input:checked) span {
+    border: 2px solid var(--foreground-header);
+    border-top: 0;
+    border-left: 0;
+    padding: 6px 3px;
+    border-radius: 3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 8px;
+}
+
+.repeat {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    transition: background-position .3s ease-in-out;
+    color: var(--foreground-header);
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.repeat:hover, .repeat *:hover + .repeat {
+    background-position: 100% 0;
+}
+
+.repeat * {
+    background-color: var(--accent-yellow);
+}
+
+.input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.input input {
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    color: var(--foreground-header);
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.9rem;
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    transition: background-position .3s ease-in-out;
+    cursor: text;
+    padding-left: 4px;
+}
+
+.input input:hover {
+    background-position: 100% 0;
+}
+
+.multiselect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 0.9rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.button:hover {
+    background-position: 100% 0;
+}
+
+.multiselect .checkboxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 550px;
+}
+
+@media screen and (max-width: 600px) {
+    .multiselect .checkboxes {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .multiselect .checkboxes {
+        width: 270px;
+    }
+}

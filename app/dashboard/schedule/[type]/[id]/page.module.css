@@ -1,0 +1,372 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+}
+
+.info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 14px;
+    max-width: 90%;
+    word-break: break-all;
+}
+
+.info p span:first-child {
+    font-weight: bold;
+}
+
+.chromes {
+    margin-left: 20px;
+    list-style: disc;
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+}
+
+.dates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+}
+
+.dates ul {
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+}
+
+.dates ul li::before {
+    content: '\2022\00A0\00A0';
+}
+
+.dates ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.dates ul li span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+.dates p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+}
+
+.dates p span:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+
+.editable {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+}
+
+.buttons button {
+    height: 30px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+    color: var(--foreground-header);
+}
+
+.buttons button img {
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-position: 100% 0;
+}
+
+.edit {
+    visibility: visible;
+    max-width: 50px;
+}
+
+.savecancel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    visibility: hidden;
+    max-width: 0;
+    overflow: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+    max-width: 0;
+}
+
+.editing {
+    visibility: visible;
+    max-width: 65px;
+}
+
+.input {
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    color: var(--foreground-header);
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.9rem;
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    transition: background-position .3s ease-in-out;
+    cursor: text;
+    padding-left: 4px;
+}
+
+.input:hover {
+    background-position: 100% 0;
+}
+
+.checkbox input {
+    width: 0;
+}
+
+.checkbox {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 5px 5px;
+    color: var(--foreground-header);
+    border-radius: 10px;
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position .3s ease-in-out;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    cursor: pointer;
+    margin: 0 7.5px;
+    text-wrap: nowrap;
+}
+
+.checkbox:not(:has(input:disabled)):hover {
+    background-position: 100% 0;
+}
+
+.checkbox span {
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-color: var(--foreground-header);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.checkbox:has(input:disabled) {
+    opacity: 50%;
+    text-decoration: line-through;
+}
+
+.checkbox:has(input:checked) {
+    background-position: 100% 0;
+    color: var(--foreground-header);
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.checkbox:has(input:checked) span {
+    border: 2px solid var(--foreground-header);
+    border-top: 0;
+    border-left: 0;
+    padding: 6px 3px;
+    border-radius: 3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 6px;
+}
+
+.schedules {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    overflow-x: auto;
+    display: block;
+    text-wrap: nowrap;
+    color: var(--foreground-header);
+}
+
+.header {
+    background-color: var(--accent-yellow);
+}
+
+.header td {
+    padding: 10px;
+}
+
+.twrapper {
+    background-color: var(--background-header);
+}
+
+.twrapper h3 {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--accent-yellow);
+    color: var(--foreground-header);
+}
+
+.schedules tr:nth-child(odd):not(:first-child) {
+    background-color: var(--background-footer);
+}
+
+.schedules tr:nth-child(even):not(:first-child) .checkbox {
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-footer)), color-stop(50%, var(--background-footer)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-footer), var(--background-footer) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+}
+
+.schedules tr:nth-child(even):not(:first-child) .checkbox:hover {
+    background-position: 100% 0;
+}
+
+.schedule td {
+    padding: 10px;
+}
+
+.schedule:has(p) {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+}
+
+.schedule:has(p) div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.button {
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--background-header)), color-stop(50%, var(--background-header)), color-stop(50%, var(--accent-yellow)), to(var(--accent-yellow)));
+    background: -o-linear-gradient(bottom, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background: linear-gradient(to top, var(--background-header), var(--background-header) 50%, var(--accent-yellow) 50%, var(--accent-yellow));
+    background-position: 0 100%;
+    background-size: 200% 200%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--foreground-header);
+}
+
+.button:hover {
+    background-position: 100% 0;
+}
+
+@media screen and (max-width: 500px) {
+    .chromes {
+        -webkit-columns: 2;
+           -moz-columns: 2;
+                columns: 2;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chromes {
+        -webkit-columns: 1;
+           -moz-columns: 1;
+                columns: 1;
+    }
+}
